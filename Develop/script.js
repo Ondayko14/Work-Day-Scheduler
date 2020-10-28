@@ -15,11 +15,30 @@ var currentDay = function() {
     }, 30000);
 }
 
-//Dynamically update background of the textArea using the date
-var changeBackground = function() {
+
+
+
+//Dynamically update backgrounds of the textArea using the date
+var changeBackground9am = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
     //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 9) {
+    $("#9amText")
+    .addClass("past");
+    }
     //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 9) {
+        $("#9amText")
+        .addClass("present");
+    }
     //else, turn the textare background green
+    else {
+        $("#9amText")
+        .addClass("future");
+    }
+}, 1000);
 }
 //function calls
+changeBackground9am();
 currentDay();
