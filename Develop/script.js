@@ -11,10 +11,10 @@ var currentDay = function() {
     var dateUpdated = moment().local().format("ddd, h: mA").toString();
     $("#currentDay")
     .text("Today Is " + dateUpdated);
-    console.log(dateUpdated);
-    }, 5000);
+    }, 30000);
 }
 
+//create the hours
 
 //function calls
 currentDay();

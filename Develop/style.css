@@ -69,3 +69,11 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+h2 {
+  font-size: 2rem;
+}
+
+.iconSize {
+  font-size: 1.5rem;
+}
