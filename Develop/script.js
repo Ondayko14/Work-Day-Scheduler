@@ -18,7 +18,8 @@ var currentDay = function() {
 
 
 
-//Dynamically update backgrounds of the textArea using the date
+//Dynamically update backgrounds of the textAreas using the hour
+//9am
 var changeBackground9am = function() {
     //update every 1 seconed mins
     setInterval(function() {
@@ -39,6 +40,182 @@ var changeBackground9am = function() {
     }
 }, 1000);
 }
+//10am
+var changeBackground10am = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 10) {
+    $("#10amText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 10) {
+        $("#10amText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#10amText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//11am
+var changeBackground11am = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 11) {
+    $("#11amText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 11) {
+        $("#11amText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#11amText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//12pm
+var changeBackground12pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 12) {
+    $("#12pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 12) {
+        $("#12pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#12pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//1pm
+var changeBackground1pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 13) {
+    $("#1pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 13) {
+        $("#1pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#1pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//2pm
+var changeBackground2pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 14) {
+    $("#2pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 14) {
+        $("#2pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#2pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//3pm
+var changeBackground3pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 15) {
+    $("#3pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 15) {
+        $("#3pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#3pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//4pm
+var changeBackground4pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 16) {
+    $("#4pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 16) {
+        $("#4pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#4pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
+//5pm
+var changeBackground5pm = function() {
+    //update every 1 seconed mins
+    setInterval(function() {
+    //if the hour has passed, turn textarea background gray
+    if(moment().local().hour() > 17) {
+    $("#5pmText")
+    .addClass("past");
+    }
+    //else if the hour is currently happening, turn the textarea background red
+    else if (moment().local().hour() === 17) {
+        $("#5pmText")
+        .addClass("present");
+    }
+    //else, turn the textare background green
+    else {
+        $("#5pmText")
+        .addClass("future");
+    }
+}, 1000);
+}
 //function calls
 changeBackground9am();
+changeBackground10am();
+changeBackground11am();
+changeBackground12pm();
+changeBackground1pm();
+changeBackground2pm();
+changeBackground3pm();
+changeBackground4pm();
+changeBackground5pm();
 currentDay();
