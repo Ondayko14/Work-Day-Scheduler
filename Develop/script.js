@@ -15,9 +15,11 @@ var currentDay = function() {
     }, 30000);
 }
 
+//Object to save the inputs into local storage.
+var tasksData = {};
 
-
-
+//what happens when saved button is clicked.
+//9am save
 //Dynamically update backgrounds of the textAreas using the hour
 //9am
 var changeBackground9am = function() {
@@ -39,7 +41,7 @@ var changeBackground9am = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //10am
 var changeBackground10am = function() {
     //update every 1 seconed mins
@@ -60,7 +62,7 @@ var changeBackground10am = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //11am
 var changeBackground11am = function() {
     //update every 1 seconed mins
@@ -81,7 +83,7 @@ var changeBackground11am = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //12pm
 var changeBackground12pm = function() {
     //update every 1 seconed mins
@@ -102,7 +104,7 @@ var changeBackground12pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //1pm
 var changeBackground1pm = function() {
     //update every 1 seconed mins
@@ -123,7 +125,7 @@ var changeBackground1pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //2pm
 var changeBackground2pm = function() {
     //update every 1 seconed mins
@@ -144,7 +146,7 @@ var changeBackground2pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //3pm
 var changeBackground3pm = function() {
     //update every 1 seconed mins
@@ -165,7 +167,7 @@ var changeBackground3pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //4pm
 var changeBackground4pm = function() {
     //update every 1 seconed mins
@@ -186,7 +188,7 @@ var changeBackground4pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
 //5pm
 var changeBackground5pm = function() {
     //update every 1 seconed mins
@@ -207,7 +209,8 @@ var changeBackground5pm = function() {
         .addClass("future");
     }
 }, 1000);
-}
+};
+
 //function calls
 changeBackground9am();
 changeBackground10am();
@@ -219,3 +222,24 @@ changeBackground3pm();
 changeBackground4pm();
 changeBackground5pm();
 currentDay();
+
+//listeners
+$("#saver").on("click", function() {
+    //get the time slot
+    var timeSlot = $(".timeCheck")
+    .attr("id");
+    console.log(timeSlot);
+
+    //get the text content
+    var text = $("textarea")
+    .val()
+    .trim();
+    console.log(text);
+
+    //get the index
+    var index = $(this)
+    .closest(".timeCheck")
+    .index();
+
+    console.log(timeSlot +" " + text + " " + index);
+});
