@@ -16,10 +16,9 @@ var currentDay = function() {
 }
 
 //Object to save the inputs into local storage.
-var tasksData = {};
+var tasks = [];
 
-//what happens when saved button is clicked.
-//9am save
+
 //Dynamically update backgrounds of the textAreas using the hour
 //9am
 var changeBackground9am = function() {
@@ -222,24 +221,90 @@ changeBackground3pm();
 changeBackground4pm();
 changeBackground5pm();
 currentDay();
+load();
 
 //listeners
-$("#saver").on("click", function() {
+
+//9am listen
+$("#saver9").on("click", function() {
     //get the time slot
     var timeSlot = $(".timeCheck")
     .attr("id");
-    console.log(timeSlot);
 
     //get the text content
     var text = $("textarea")
     .val()
     .trim();
-    console.log(text);
 
     //get the index
     var index = $(this)
     .closest(".timeCheck")
     .index();
 
-    console.log(timeSlot +" " + text + " " + index);
+    //push them into the index as an object
+    localStorage.setItem("9am", text);
+});
+//10am listen
+$("#saver10").on("click", function() {
+    //get the text content
+    var text = $("#10amText")
+    .val()
+    .trim();
+    localStorage.setItem("10am", text);
+});
+//11 am listen
+$("#saver11").on("click", function() {
+    //get the text content
+    var text = $("#11amText")
+    .val()
+    .trim();
+    localStorage.setItem("11am", text);
+});
+//12 am listen
+$("#saver12").on("click", function() {
+    //get the text content
+    var text = $("#12pmText")
+    .val()
+    .trim();
+    localStorage.setItem("12pm", text);
+});
+//1 pm listen
+$("#saver1").on("click", function() {
+    //get the text content
+    var text = $("#1pmText")
+    .val()
+    .trim();
+    localStorage.setItem("1pm", text);
+});
+//2 pm listen
+$("#saver2").on("click", function() {
+    //get the text content
+    var text = $("#2pmText")
+    .val()
+    .trim();
+    localStorage.setItem("2pm", text);
+});
+//3 pm listen
+$("#saver3").on("click", function() {
+    //get the text content
+    var text = $("#3pmText")
+    .val()
+    .trim();
+    localStorage.setItem("3pm", text);
+});
+//4 pm listen
+$("#saver4").on("click", function() {
+    //get the text content
+    var text = $("#4pmText")
+    .val()
+    .trim();
+    localStorage.setItem("4pm", text);
+});
+//5 pm listen
+$("#saver5").on("click", function() {
+    //get the text content
+    var text = $("#5pmText")
+    .val()
+    .trim();
+    localStorage.setItem("5pm", text);
 });
