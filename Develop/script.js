@@ -18,6 +18,98 @@ var currentDay = function() {
 //Object to save the inputs into local storage.
 var tasks = [];
 
+//Loads in previous data
+//load 9
+var load9 = function () {
+    var time = localStorage.getItem("9am");
+    if (!time) {
+        return "";
+    } else {
+        $("#9amText")
+        .text(time);
+    }
+};
+//load 10
+var load10 = function () {
+    var time = localStorage.getItem("10am");
+    if (!time) {
+        return "";
+    } else {
+        $("#10amText")
+        .text(time);
+    }
+};
+//load 11
+var load11 = function () {
+    var time = localStorage.getItem("11am");
+    if (!time) {
+        return "";
+    } else {
+        $("#11amText")
+        .text(time);
+    }
+};
+//load 12
+var load12 = function () {
+    var time = localStorage.getItem("12pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#12pmText")
+        .text(time);
+    }
+};
+//load 1
+var load1 = function () {
+    var time = localStorage.getItem("1pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#1pmText")
+        .text(time);
+    }
+};
+//load 2
+var load2 = function () {
+    var time = localStorage.getItem("2pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#2pmText")
+        .text(time);
+    }
+};
+//load 3
+var load3 = function () {
+    var time = localStorage.getItem("3pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#3pmText")
+        .text(time);
+    }
+};
+//load 4
+var load4 = function () {
+    var time = localStorage.getItem("4pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#4pmText")
+        .text(time);
+    }
+};
+//load 5
+var load5 = function () {
+    var time = localStorage.getItem("5pm");
+    if (!time) {
+        return "";
+    } else {
+        $("#5pmText")
+        .text(time);
+    }
+};
+
 
 //Dynamically update backgrounds of the textAreas using the hour
 //9am
@@ -221,7 +313,15 @@ changeBackground3pm();
 changeBackground4pm();
 changeBackground5pm();
 currentDay();
-load();
+load9();
+load10();
+load11();
+load12();
+load1();
+load2();
+load3();
+load4();
+load5();
 
 //listeners
 
